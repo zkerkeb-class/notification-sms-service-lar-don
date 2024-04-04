@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-const {json} = require("express");
 require('dotenv').config();
 
 // Créer un transporter pour nodemailer avec les détails de votre service d'email
