@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const {json} = require("express");
 require('dotenv').config();
 
 // Créer un transporter pour nodemailer avec les détails de votre service d'email
@@ -14,7 +15,7 @@ exports.sendConfirmEmail = async (req, res) => {
      // Récupérer les détails de l'email à partir du corps de la requête
     const user = req.body.user;
     const subject = "Confirmation d'inscription"
-    const text = confirmEmailTemplate(user.nom, "Lardon Services", "http://localhost:4003/confirm")
+    const text = confirmEmailTemplate(user.username, "Lardon Services", "http://localhost:4003/confirm")
 
     try {
         let info = await transporter.sendMail({
