@@ -24,7 +24,7 @@ exports.sendConfirmEmail = async (req, res) => {
             html: text, // corps du texte
         });
 
-        console.log('Message sent: %s', info.messageId);
+        console.info('Message sent: %s', info.messageId);
         return res.send('Email sent successfully');
     } catch (error) {
         console.error('Error sending email: ', error);

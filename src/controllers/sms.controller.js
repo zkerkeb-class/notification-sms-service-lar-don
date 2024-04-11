@@ -13,7 +13,7 @@ exports.sendSms = async (req, res) => {
 
     await vonage.sms.send({to, from, text})
         .then(resp => {
-            console.log(resp);
+            console.info(resp);
             return res.send('Message sent successfully');
         })
         .catch(err => {
