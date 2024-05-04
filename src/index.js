@@ -12,5 +12,5 @@ app.get('/confirm', (req, res) => {
 // Démarrer le serveur
 const PORT = process.env.PORT
 app.listen(PORT, () => {
-    console.info(`Serveur démarré sur http://localhost:${PORT}`);
+    console.info(`Serveur démarré sur le port ${PORT}`);
 });
